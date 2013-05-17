@@ -22,17 +22,35 @@ gem 'configuration'
 gem 'fastercsv', '1.5.3', :platforms => :ruby_18
 # (using standard csv lib if ruby version is 1.9)
 
+
 group :production do
-  gem 'pg'
+  platform :ruby do
+    gem 'pg'
+  end
+  platform :jruby do
+    gem 'activerecord-jdbc-adapter'
+    gem 'activerecord-jdbcpostgresql-adapter'
+  end
 end
 
 group :development, :test do
-  gem 'sqlite3'
+  platform :ruby do
+    gem 'sqlite3'
+  end
+  platform :jruby do
+    gem 'jdbc-sqlite3'
+    gem 'activerecord-jdbcsqlite3-adapter'
+  end
+
+
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'jasmine', '1.1.0'
-  gem 'capybara'
-  gem 'capybara-webkit'
+  platform :ruby do
+    gem 'capybara'
+    gem 'capybara-webkit'
+  end
+
   gem 'database_cleaner'
 end
 
