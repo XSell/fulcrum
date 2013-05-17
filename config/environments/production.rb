@@ -58,4 +58,14 @@ Fulcrum::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  ActionMailer::Base.smtp_settings = {
+      :user_name => "dpayonk",
+      :password => "230sLasalle",
+      :domain => "xselltechnologies.com",
+      :address => "smtp.sendgrid.net",
+      :port => 587,
+      :authentication => :plain,
+      :enable_starttls_auto => true
+  }
 end
