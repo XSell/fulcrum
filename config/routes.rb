@@ -24,6 +24,8 @@ Fulcrum::Application.routes.draw do
     end
   end
 
+
+  match '/users/sign_up' => "home#index"
   devise_for :users, :controllers => { 
       :confirmations => "confirmations", 
       :registrations => "registrations"
