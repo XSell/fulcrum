@@ -61,7 +61,7 @@ Fulcrum::Application.configure do
 
   ActionMailer::Base.smtp_settings = {
       :user_name => "dpayonk",
-      :password => "230sLasalle",
+      :password => "Pa$$word",
       :domain => "xselltechnologies.com",
       :address => "smtp.sendgrid.net",
       :port => 587,
