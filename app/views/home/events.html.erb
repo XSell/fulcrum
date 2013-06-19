@@ -1,0 +1,7 @@
+<ul id="projects">
+  <% @events.sort_by{|s| s.created_at }.each do |event| %>
+      <li style="padding-bottom:0px">
+        <p><%= event.text %></p>
+      </li>
+  <% end %>
+</ul>

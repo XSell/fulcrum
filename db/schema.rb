@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120504152649) do
+ActiveRecord::Schema.define(:version => 20130618162313) do
 
   create_table "changesets", :force => true do |t|
     t.integer  "story_id"
@@ -28,6 +28,13 @@ ActiveRecord::Schema.define(:version => 20120504152649) do
     t.datetime "updated_at"
   end
 
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "project_id"
+  end
+
   create_table "projects", :force => true do |t|
     t.string   "name"
     t.string   "point_scale",         :default => "fibonacci"
@@ -37,11 +44,26 @@ ActiveRecord::Schema.define(:version => 20120504152649) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "default_velocity",    :default => 10
+    t.string   "repository_url"
   end
 
   create_table "projects_users", :id => false, :force => true do |t|
     t.integer "project_id"
     t.integer "user_id"
+  end
+
+  create_table "rambles", :force => true do |t|
+    t.integer  "created_by"
+    t.text     "text"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.text     "scoops"
+  end
+
+  create_table "scoops", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "stories", :force => true do |t|
@@ -58,6 +80,13 @@ ActiveRecord::Schema.define(:version => 20120504152649) do
     t.datetime "updated_at"
     t.decimal  "position"
     t.string   "labels"
+  end
+
+  create_table "user_scoops", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "scoop_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -1,5 +1,10 @@
-@import 'bootstrap';
-@import 'jquery_gritter';
-@import 'jquery_tagit';
-@import 'screen';
-@import 'skins/default';
+/*
+//Added due to this post, Fix when fixed --> http://stackoverflow.com/questions/7046495/rails-3-1-asset-pipeline-doesnt-pick-up-changes-to-importd-sheets
+*= require bootstrap
+*= require bootstrap-responsive
+*= require jquery_gritter
+*= require jquery_tagit
+*= require screen
+*= require skins/default
+*= require prattle
+*/

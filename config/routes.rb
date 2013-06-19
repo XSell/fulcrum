@@ -1,5 +1,10 @@
 Fulcrum::Application.routes.draw do
 
+
+
+  resources :products
+
+  match 'events', :to => "home#events", :via => [:get]
   get "story/new"
 
   resources :projects do
@@ -84,7 +89,10 @@ Fulcrum::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "projects#index"
+  authenticate :user do
+    mount Rambler::Engine, :at => '/rambler'
+  end
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 

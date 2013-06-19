@@ -519,7 +519,7 @@ Fulcrum.StoryView = Fulcrum.FormView.extend({
       var $div = $(div);
       if (content.label) {
         $div.append(this.label(content.name));
-        $div.append('<br/>');
+        //$div.append('<br/>');
       }
       $div.append(content.control);
     }

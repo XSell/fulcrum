@@ -432,6 +432,44 @@ ul#projects li {
   border-bottom: 1px solid $td-border-color;
 }
 
+ul#projects{
+  width:100%;
+}
+
+
 .project_options a {
   display: block;
+}
+
+.navbar {
+  margin-bottom:0px;
+}
+
+#title_bar {
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+#main{
+  margin-left:1em;
+  margin-right:1em;
+  margin-top:1px;
+}
+
+select {
+  width:auto;
+  height:20px;
+  line-height:20px;
+}
+
+body{
+  font-size:12px;
+  line-height:16px;
+}
+
+label{
+  display:inline-block;
+  width:40%;
 }

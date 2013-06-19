@@ -1,1 +1,17 @@
-<h1>Sorry, this is a closed app.</h1>
+<% content_for :title_bar do %>
+    <h2><%= t('.Home') %></h2>
+<% end %>
+<div style="border-right:1px solid lightgray;" class="span3">
+  <h4>Stories I Own</h4>
+  <%= render 'shared/user_stories' %>
+
+</div>
+<div class="span5" style="padding-left:20px;padding-right:20px">
+    <h4>Products</h4>
+    <%= render 'shared/projects' %>
+  </div>
+
+  <div style="padding-left:20px;border-left:1px solid lightgray;" class="span3">
+    <%= render 'shared/rambler' %>
+  </div>
+</div>

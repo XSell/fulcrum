@@ -12,9 +12,10 @@ group :assets do
   gem 'ejs'
 end
 
+gem 'prattle',  :git => 'git@github.com:XSell/prattle.git'
 gem 'jquery-rails'
 
-gem 'devise', "~> 2.0.5"
+gem 'devise', "~> 2.1.0"
 gem 'transitions', '0.0.9', :require => ["transitions", "active_record/transitions"]
 gem 'i18n-js'
 gem 'rails-i18n'
@@ -22,6 +23,8 @@ gem 'configuration'
 
 gem 'fastercsv', '1.5.3', :platforms => :ruby_18
 # (using standard csv lib if ruby version is 1.9)
+
+gem 'rambler', :git => 'git@github.com:XSell/rambler.git'
 
 
 group :production do
@@ -35,6 +38,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'ruby-debug'
   platform :ruby do
     gem 'sqlite3'
   end

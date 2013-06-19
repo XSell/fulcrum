@@ -14,14 +14,18 @@
 </head>
 <body id="<%= page_id %>">
 
-<div id="header">
-  <ul id="primary-nav">
+<div class="navbar" id="header">
+  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+  <div class="nav-collapse collapse">
+  <ul id="primary-nav" >
     <li class="root"><%= link_to t('fulcrum'), root_path %></li>
     <% if current_user %>
+
       <li<%= ' class="secondary"'.html_safe if current_user.projects.present? %>>
         <%= link_to Project.model_name.human(:count => 2), root_path %>
         <%- if current_user.projects.present? -%>
           <ul>
+            <li><%= link_to t('Create a new Project'), new_project_path, :class => 'btn btn-mini', :style => 'width:auto' %></li>
             <%- current_user.projects.each do |project| -%>
               <li><%= link_to project, project %></li>
             <%- end -%>
@@ -38,6 +42,7 @@
       <% end -%>
     <% end %>
   </ul>
+  </div>
 </div>
 
 <div id="title_bar">
@@ -49,6 +54,8 @@
 
   <%= yield %>
 </div>
+
+<%=Prattle::ViewHelpers.prattle %>
 
 </body>
 </html>

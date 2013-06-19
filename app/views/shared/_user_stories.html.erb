@@ -1,0 +1,14 @@
+  <div class="row-fluid">
+      <ul id="projects">
+        <% @stories.sort_by{|s| s.project_id }.each do |story| %>
+            <li>
+              <div class="row-fluid">
+                <h6><%= story.project.name %></h6>
+                <%= story.title %>
+              </div>
+              <button class="btn btn-mini"><%= link_to 'Goto Project', project_path(:id => story.project_id) %></button>
+
+            </li>
+        <% end %>
+      </ul>
+  </div>

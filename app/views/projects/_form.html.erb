@@ -10,6 +10,11 @@
     </div>
 
     <div class="control-group">
+      <%= f.label :repository_url, :class => 'control-label' %>
+      <div class="controls"><%= f.text_field :repository_url %></div>
+    </div>
+
+    <div class="control-group">
       <%= f.label :point_scale, :class => 'control-label' %>
       <div class="controls"><%= f.select :point_scale, point_scale_options %></div>
     </div>

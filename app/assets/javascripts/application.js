@@ -23,4 +23,5 @@
 //= require tag-it
 //= require i18n
 //= require i18n/translations
+//= require prattle
 //= require_tree .
