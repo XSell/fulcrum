@@ -24,7 +24,7 @@ gem 'configuration'
 gem 'fastercsv', '1.5.3', :platforms => :ruby_18
 # (using standard csv lib if ruby version is 1.9)
 
-gem 'rambler', :git => 'git@github.com:XSell/rambler.git'
+gem 'rambler', :git => 'https://27c409246afcb871f5fc830230122bda3c6de679:x-oauth-basic@github.com/XSell/rambler.git'
 
 
 group :production do
