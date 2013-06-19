@@ -12,7 +12,7 @@ group :assets do
   gem 'ejs'
 end
 
-gem 'prattle',  :git => 'git@github.com:XSell/prattle.git'
+gem 'prattle',  :git => 'https://github.com/XSell/prattle.git'
 gem 'jquery-rails'
 
 gem 'devise', "~> 2.1.0"
