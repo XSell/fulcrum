@@ -32,6 +32,7 @@ group :production do
     gem 'pg'
   end
   platform :jruby do
+    gem 'puma'
     gem 'activerecord-jdbc-adapter'
     gem 'activerecord-jdbcpostgresql-adapter'
   end
